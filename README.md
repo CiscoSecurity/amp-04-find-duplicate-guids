@@ -16,7 +16,6 @@ python find_duplicate_guids.py
 
 ### Example script output:
 ```
-python find_duplicate_guids.py
 GUIDs found in environment: 14
 Hosts with duplicate GUIDs found: 2
 
