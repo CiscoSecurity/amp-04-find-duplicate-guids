@@ -5,7 +5,7 @@
 Looks through the computers in an environment and finds duplicate GUIDs based on MAC address.
 
 ### Before using you must update the following:
-The authentictaion parameters are set in the ```api.cfg``` :
+The authentication parameters are set in the ```api.cfg``` :
 - client_id 
 - api_key
 
