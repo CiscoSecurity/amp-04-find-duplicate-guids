@@ -28,7 +28,8 @@ def process_response_json(response_json, parsing_container):
             parsing_container[hostname]['mac_guids'][mac].add(connector_guid)
 
     for guid_entry in response_json['data']:
-        process_guid_json(guid_entry)
+        if 'network_addresses' in guid_entry:
+            process_guid_json(guid_entry)
 
 def analyze_parsed_computers(parsed_data, duplicate_container):
     ''' Analyzes the parsed_computers container and looks at how many times each MAC Address
