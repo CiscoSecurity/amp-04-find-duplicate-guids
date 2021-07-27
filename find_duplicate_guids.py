@@ -86,12 +86,7 @@ def write_parsed_computers(parsed_data):
     with open('parsed_computers.json', 'w') as file:
         file.write(json.dumps(parsed_data))
 
-def get(session, url):
-    '''HTTP GET the URL and return the decoded JSON
-    '''
-    response = session.get(url)
-    response_json = response.json()
-    return response_json
+def get(session, url):     '''HTTP GET the URL and return the decoded JSON     '''     http_proxy = "http://a.b.c.d:8080"     https_proxy = "http://a.b.c.d:8080"      proxyDict = {         "http": http_proxy,         "https": https_proxy     }     response = session.get(url, proxies=proxyDict)     response_json = response.json()     return response_json
 
 def main():
     '''The main logic of the script
